@@ -21,7 +21,7 @@ const shumacher = 'Шумахером';
 const userHometownLowerRegister = userHometown.toLowerCase()
 const userFavoriteSportLowerRegister = userFavoriteSport.toLowerCase()
 
-function countryMessage(userHometownLowerRegister) {
+function countryMessage() {
   if (userHometownLowerRegister === kyiv.toLowerCase()) {
     return result = `Ти живеш у столиці ${ukraine}`;
   } else if (userHometownLowerRegister === washington.toLowerCase()) {
@@ -32,7 +32,7 @@ function countryMessage(userHometownLowerRegister) {
     return result = `Ти живеш у місті ${userHometown}`
   };
 }
-function sportMessage(userFavoriteSportLowerRegister) {
+function sportMessage() {
   if (userFavoriteSportLowerRegister === football.toLowerCase()) {
     return result = `Круто! Хочеш стати ${pele}?`;
   } else if (userFavoriteSportLowerRegister === box.toLowerCase()) {
@@ -55,5 +55,5 @@ if (!userFavoriteSport) {
 }
 
 alert(`Твій рік народження: ${userBirthDate}\n
-${countryMessage(userHometownLowerRegister)}\n
-${sportMessage(userFavoriteSport)}`);
+${countryMessage()}\n
+${sportMessage()}`);
