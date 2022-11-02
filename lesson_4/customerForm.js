@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  if (userBirthDate === null) {
+  if (!userBirthDate) {
     alert(`Шкода, що Ви не захотіли ввести свій рік народження`);
   }
   if (userHometown === null) {
