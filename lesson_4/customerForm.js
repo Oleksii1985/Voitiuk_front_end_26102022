@@ -40,7 +40,8 @@ document.addEventListener('DOMContentLoaded', () => {
     alert(`Шкода, що Ви не захотіли ввести свій улюблений вид спорту`);
   }
 
-  if (userHometown === kyiv || userHometown === washington || userHometown === london) {
+const userHometownLowerRegister = userHometown.toLowerCase()
+  if (userHometownLowerRegister === kyiv.toLowerCase() || ...) {
     alert(`Твій рік народження: ${userBirthDate}\n
     Ти живеш у столиці ${userHometown}\n
     ${sportMessage(userFavoriteSport)}`);
