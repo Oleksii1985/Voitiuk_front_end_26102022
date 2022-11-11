@@ -56,26 +56,26 @@ let users = [
 ]
 
 // balance with more 2000 dollars
-let balanceMore = users.filter(user => user.balance > '$2,000.00');
+const balanceMore = users.filter(user => Number(user.balance.replace(/[\s$,%]/g, '')) > 2000);
 console.log(balanceMore);
 
 // phone numbers who has more 2000 dollars balance
-let telNumbers = balanceMore.map(user => user.phone + ' ');
+const telNumbers = balanceMore.map(user => user.phone);
 console.log(telNumbers);
 
 
 // array with all balances values
-let allBalance = users.map(user => user.balance);
+const allBalance = users.map(user => user.balance);
 console.log(allBalance)
 
 
 // new array without $ and comma
-let noDollar = allBalance.map(user => user.replace(/[\s$,%]/g, ''));
+const noDollar = allBalance.map(user => Number(user.replace(/[\s$,%]/g, '')));
 console.log(noDollar)
 
 
 // total summary all users balances
 const totalBalance = 0;
 
-const sumTotalBalance = noDollar.reduce((accumulator, value) => accumulator + Number(value), totalBalance);
+const sumTotalBalance = noDollar.reduce((accumulator, value) => accumulator + value, totalBalance);
 console.log(sumTotalBalance.toFixed(2))
