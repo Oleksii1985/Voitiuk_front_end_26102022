@@ -79,3 +79,35 @@ const totalBalance = 0;
 
 const sumTotalBalance = noDollar.reduce((accumulator, value) => accumulator + value, totalBalance);
 console.log(sumTotalBalance.toFixed(2))
+
+/*
+//getting users numbers 
+
+const requestedBalance = 2000;
+const usersNumber = users.filter(filterByBalance).map(phonesByBalance);
+
+function formatBalance(balance) {
+  return Number(balance.replace('$', '').replace(',', ''));
+}
+
+function filterByBalance(user) {
+  return formatBalance(user.balance) > requestedBalance;
+}
+
+function phonesByBalance(user) {
+  return user.phone
+}
+
+document.getElementById("arr").innerHTML = `User's phone numbers with balance over $2000: ${usersNumber} \n`;
+
+//getting sum of all balances
+
+const initialValue = 0;
+const balanceSum = users.reduce((total, user) => {
+  return total + formatBalance(user.balance);
+}, initialValue);
+
+const formatSum = balanceSum.toFixed(2)
+
+document.getElementById("arr").innerHTML += `The sum is $${formatSum}`;
+*/
