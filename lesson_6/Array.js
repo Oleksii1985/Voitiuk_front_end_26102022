@@ -18,12 +18,11 @@ while (lenghtArray > 0) {
   lenghtArray -= 1;
   console.log(newArrayFromUser);
 }
-console.log(newArrayFromUser);
-
 
 newArrayFromUser.sort();
-console.log(newArrayFromUser);
+const arrayAfterSort = newArrayFromUser.sort(function (a, b) { return a - b });
+console.log(arrayAfterSort);
 
 
-newArrayFromUser.splice(1, 3)
-console.log(newArrayFromUser)
+arrayAfterSort.splice(1, 3);
+console.log(arrayAfterSort);
