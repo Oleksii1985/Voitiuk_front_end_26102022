@@ -2,7 +2,7 @@ const array = [1, 2, 3, 4, 5, 6, 7];
 
 /**
  * 
- * @param {array} someArray 
+ * @param {Array<number>} someArray 
  * @param {number} number 
  * 
  * @returns array
