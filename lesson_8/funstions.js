@@ -3,7 +3,7 @@
 numbers = [1, 2, 3, 14, 'bla', 3.2]
 
 /**
- * @param {array <number>} nums 
+ * @param {array <any>} nums 
  * 
  * @returns array <number>
  */
