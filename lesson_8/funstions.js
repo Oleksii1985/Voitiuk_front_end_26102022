@@ -16,7 +16,7 @@ function average(nums) {
       result.push(nums[i]);
     }
   }
-  return result.reduce((a, b) => (a + b)) / result.length;
+  return result.reduce((a, b) => (a + b), 0) / result.length;
 }
 
 console.log(average(numbers).toFixed(2))
