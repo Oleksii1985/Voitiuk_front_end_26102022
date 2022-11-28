@@ -10,13 +10,13 @@ numbers = [1, 2, 3, 14, 'bla', 3.2]
 
 
 function average(nums) {
-  result = [];
+  const result = [];
   for (let i = 0; i < nums.length; i++) {
     if (Number(nums[i])) {
       result.push(nums[i]);
     }
   }
-  return result.reduce((a, b) => (a + b)) / result.length;
+  return result.reduce((a, b) => (a + b), 0) / result.length;
 }
 
 console.log(average(numbers).toFixed(2))
@@ -38,6 +38,7 @@ const number2 = parseFloat(prompt('Enter second number: '));
  */
 
 function doMath(x, znak, y) {
+  let result;
   switch (znak) {
     case '+':
       result = x + y;
