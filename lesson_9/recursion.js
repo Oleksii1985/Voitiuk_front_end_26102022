@@ -6,15 +6,12 @@
 
 function numberToPow(number, pow) {
   if (pow >= 0) {
-    const result = pow === 0 ? 1 : number * numberToPow(number, --pow);
-    return result;
+    return pow === 0 ? 1 : number * numberToPow(number, --pow);
   } else {
     if (pow === -1) {
-      const result = 1.0 / number;
-      return result;
+      return 1.0 / number;
     } else {
-      const result = 1.0 / (number * numberToPow(number, (-1) * (pow + 1)));
-      return result;
+      return 1.0 / (number * numberToPow(number, (-1) * (pow + 1)));;
     }
   }
 }
